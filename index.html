@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhancing Creative Thinking | 增進創意思考能力</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', 'Noto Sans TC', sans-serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        /* Only hover effect if not interacting with accordion to prevent jitter */
+        .glass-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Smooth height transition for accordion */
+        .accordion-content {
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.active {
+            max-height: 200px; /* Arbitrary large height */
+            opacity: 1;
+        }
+        .chevron {
+            transition: transform 0.3s ease;
+        }
+        .chevron.rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="min-h-screen text-gray-800 bg-gray-50">
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden pt-20 pb-12 px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-6 font-mono text-gray-500 text-sm tracking-wider">
+                Student: 馬盛中 | ID: 4B1YZ001
+            </div>
+            <div class="inline-block p-2 px-4 rounded-full bg-indigo-50 text-indigo-600 text-sm font-semibold mb-6 tracking-wide uppercase">
+                Creative Thinking Assignment
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+                <span class="bg-gradient-to-r from-indigo-600 to-purple-600 gradient-text">How to Enhance</span> <br>
+                Creative Thinking
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-medium text-gray-600 mb-8 font-sans">
+                如何增進創意思考能力
+            </h2>
+            <p class="max-w-2xl mx-auto text-lg text-gray-500 leading-relaxed">
+                Using personal observation, imitation, and practice as key methods.
+                <br>
+                <span class="text-gray-400">以個人進行觀察、模仿及練習等方式為例。</span>
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Card 1: Observation -->
+            <div class="glass-card rounded-2xl p-8 border-t-4 border-blue-500 shadow-lg flex flex-col h-full card-container" id="card-observation">
+                <div class="flex items-center justify-center w-16 h-16 bg-blue-100 text-blue-600 rounded-full mb-6 mx-auto">
+                    <i class="fas fa-eye text-2xl"></i>
+                </div>
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900">Observation</h3>
+                    <p class="text-lg text-blue-600 font-medium">觀察</p>
+                </div>
+                <p class="text-gray-600 mb-8 text-center text-sm leading-relaxed">
+                    The ability to observe and understand the concrete or abstract thinking of others.
+                    <br>
+                    <span class="text-gray-400 italic mt-1 block">觀察及瞭解他人具體思考或抽象思考的能力。</span>
+                </p>
+                
+                <!-- Accordion Items -->
+                <div class="mt-auto space-y-3">
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                        <button class="w-full flex justify-between items-center p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                            <div class="text-left">
+                                <span class="font-semibold text-gray-700 block">Sharpness</span>
+                                <span class="text-gray-500 text-xs">敏銳度</span>
+                            </div>
+                            <i class="fas fa-chevron-down text-blue-400 chevron"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-3 text-sm text-gray-600 bg-white rounded-b-lg border-x border-b border-gray-100">
+                                Developing a keen eye for details that others might miss. It involves noticing subtle changes and nuances in your environment.
+                                <br><span class="text-gray-400 text-xs">培養對細節的敏銳觀察力，發現他人忽略的細微之處。</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                        <button class="w-full flex justify-between items-center p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                            <div class="text-left">
+                                <span class="font-semibold text-gray-700 block">Point</span>
+                                <span class="text-gray-500 text-xs">重點</span>
+                            </div>
+                            <i class="fas fa-chevron-down text-blue-400 chevron"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-3 text-sm text-gray-600 bg-white rounded-b-lg border-x border-b border-gray-100">
+                                Identifying the core essence or main problem within a complex situation. Focusing on what truly matters.
+                                <br><span class="text-gray-400 text-xs">在複雜的情況中識別核心本質或主要問題，專注於關鍵所在。</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="accordion-item">
+                        <button class="w-full flex justify-between items-center p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                            <div class="text-left">
+                                <span class="font-semibold text-gray-700 block">Analysis</span>
+                                <span class="text-gray-500 text-xs">分析</span>
+                            </div>
+                            <i class="fas fa-chevron-down text-blue-400 chevron"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-3 text-sm text-gray-600 bg-white rounded-b-lg border-x border-b border-gray-100">
+                                Breaking down observed phenomena into smaller components to understand the logic and structure behind them.
+                                <br><span class="text-gray-400 text-xs">將觀察到的現象分解為更小的部分，以理解其背後的邏輯與結構。</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Imitation -->
+            <div class="glass-card rounded-2xl p-8 border-t-4 border-emerald-500 shadow-lg flex flex-col h-full card-container" id="card-imitation">
+                <div class="flex items-center justify-center w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full mb-6 mx-auto">
+                    <i class="fas fa-masks-theater text-2xl"></i>
+                </div>
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900">Imitation</h3>
+                    <p class="text-lg text-emerald-600 font-medium">模仿</p>
+                </div>
+                <p class="text-gray-600 mb-8 text-center text-sm leading-relaxed">
+                    The behavior of imitating the concrete or abstract thinking of others.
+                    <br>
+                    <span class="text-gray-400 italic mt-1 block">模仿他人具體思考或抽象思考的行為。</span>
+                </p>
+                
+                <!-- Accordion Items -->
+                <div class="mt-auto space-y-3">
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                        <button class="w-full flex justify-between items-center p-3 bg-gray-50 rounded-lg hover:bg-emerald-50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                            <div class="text-left">
+                                <span class="font-semibold text-gray-700 block">Adaption</span>
+                                <span class="text-gray-500 text-xs">適合性</span>
+                            </div>
+                            <i class="fas fa-chevron-down text-emerald-400 chevron"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-3 text-sm text-gray-600 bg-white rounded-b-lg border-x border-b border-gray-100">
+                                Adjusting the imitated idea to fit your specific context or personal style, rather than blindly copying.
+                                <br><span class="text-gray-400 text-xs">調整模仿的想法以適應特定的情境或個人風格，而非盲目照抄。</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                        <button class="w-full flex justify-between items-center p-3 bg-gray-50 rounded-lg hover:bg-emerald-50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                            <div class="text-left">
+                                <span class="font-semibold text-gray-700 block">Target</span>
+                                <span class="text-gray-500 text-xs">目的</span>
+                            </div>
+                            <i class="fas fa-chevron-down text-emerald-400 chevron"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-3 text-sm text-gray-600 bg-white rounded-b-lg border-x border-b border-gray-100">
+                                Having a clear goal for why you are imitating specific behaviors. What outcome do you hope to achieve?
+                                <br><span class="text-gray-400 text-xs">對於模仿特定行為有明確的目標。你希望達成什麼樣的結果？</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Practice -->
+            <div class="glass-card rounded-2xl p-8 border-t-4 border-orange-500 shadow-lg flex flex-col h-full card-container" id="card-practice">
+                <div class="flex items-center justify-center w-16 h-16 bg-orange-100 text-orange-600 rounded-full mb-6 mx-auto">
+                    <i class="fas fa-pencil-alt text-2xl"></i>
+                </div>
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-900">Practice</h3>
+                    <p class="text-lg text-orange-600 font-medium">練習</p>
+                </div>
+                <p class="text-gray-600 mb-8 text-center text-sm leading-relaxed">
+                    Constantly cultivating the habit of concrete and abstract thinking.
+                    <br>
+                    <span class="text-gray-400 italic mt-1 block">不斷培養自己的具體思考與抽象思考的習慣。</span>
+                </p>
+                
+                <!-- Accordion Items -->
+                <div class="mt-auto space-y-3">
+                    <!-- Item 1 -->
+                    <div class="accordion-item">
+                        <button class="w-full flex justify-between items-center p-3 bg-gray-50 rounded-lg hover:bg-orange-50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                            <div class="text-left">
+                                <span class="font-semibold text-gray-700 block">Memory</span>
+                                <span class="text-gray-500 text-xs">記憶力</span>
+                            </div>
+                            <i class="fas fa-chevron-down text-orange-400 chevron"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-3 text-sm text-gray-600 bg-white rounded-b-lg border-x border-b border-gray-100">
+                                Building a mental library of ideas, patterns, and solutions that can be recalled and remixed later.
+                                <br><span class="text-gray-400 text-xs">建立想法、模式和解決方案的心智庫，以便日後回憶和重新組合。</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                        <button class="w-full flex justify-between items-center p-3 bg-gray-50 rounded-lg hover:bg-orange-50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                            <div class="text-left">
+                                <span class="font-semibold text-gray-700 block">Experience</span>
+                                <span class="text-gray-500 text-xs">經驗</span>
+                            </div>
+                            <i class="fas fa-chevron-down text-orange-400 chevron"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-3 text-sm text-gray-600 bg-white rounded-b-lg border-x border-b border-gray-100">
+                                Learning through doing. Accumulating practical knowledge from successes and failures over time.
+                                <br><span class="text-gray-400 text-xs">從做中學。隨著時間積累從成功和失敗中獲得的實踐知識。</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="accordion-item">
+                        <button class="w-full flex justify-between items-center p-3 bg-gray-50 rounded-lg hover:bg-orange-50 transition-colors focus:outline-none" onclick="toggleAccordion(this)">
+                            <div class="text-left">
+                                <span class="font-semibold text-gray-700 block">Verification</span>
+                                <span class="text-gray-500 text-xs">驗證</span>
+                            </div>
+                            <i class="fas fa-chevron-down text-orange-400 chevron"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-3 text-sm text-gray-600 bg-white rounded-b-lg border-x border-b border-gray-100">
+                                Testing your creative ideas in the real world to prove they work effectively and refining them based on results.
+                                <br><span class="text-gray-400 text-xs">在現實世界中測試你的創意想法，證明其有效性並根據結果進行改進。</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-16 text-gray-400 text-sm pb-8">
+            <p class="mb-2">© 2025 Creative Thinking Course Assignment</p>
+            <p>Created by 馬盛中 (4B1YZ001)</p>
+        </div>
+    </main>
+
+    <script>
+        function toggleAccordion(button) {
+            // 1. Identify the card this button belongs to
+            const card = button.closest('.card-container');
+            
+            // 2. Identify the specific content associated with this button
+            const content = button.nextElementSibling;
+            const chevron = button.querySelector('.chevron');
+            
+            // 3. Find all other open items WITHIN THIS SAME CARD
+            const allContentInCard = card.querySelectorAll('.accordion-content');
+            const allChevronsInCard = card.querySelectorAll('.chevron');
+
+            // 4. Close all other items in this card
+            allContentInCard.forEach((item, index) => {
+                if (item !== content) {
+                    item.classList.remove('active');
+                    // Reset other chevrons
+                    if(allChevronsInCard[index]) {
+                        allChevronsInCard[index].classList.remove('rotate');
+                    }
+                }
+            });
+
+            // 5. Toggle the clicked item
+            content.classList.toggle('active');
+            chevron.classList.toggle('rotate');
+        }
+    </script>
+
+</body>
+</html>
